@@ -1,0 +1,63 @@
+{
+  "name": "vue3-component-library-template",
+  "version": "0.0.1",
+  "private": false,
+  "description": "一个使用 vite和typescript 的vue3组件库模板",
+  "keywords": [
+    "vue",
+    "vue3",
+    "template",
+    "component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yyrjlw/vue3-component-library-template"
+  },
+  "type": "module",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.js",
+  "types": "./dist/lib/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "vite build",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.3.2",
+    "@tsconfig/node18": "^18.2.0",
+    "@types/node": "^18.17.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "@vue/eslint-config-typescript": "^11.0.3",
+    "@vue/tsconfig": "^0.4.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.0.0",
+    "typescript": "~5.1.6",
+    "unplugin-auto-import": "^0.17.5",
+    "vite": "^4.4.6",
+    "vite-plugin-css-injected-by-js": "^3.5.0",
+    "vite-plugin-dts": "^3.7.3",
+    "vue": "^3.3.4",
+    "vue-tsc": "^1.8.6"
+  },
+  "lint-staged": {
+    "**/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts}": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ]
+  }
+}
