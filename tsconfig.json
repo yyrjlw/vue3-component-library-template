@@ -9,7 +9,7 @@
     "noFallthroughCasesInSwitch": true,
     "declaration": true,
     "outDir": "dist",
-    "declarationDir": "dist",
+    "emitDeclarationOnly": true,
     "baseUrl": ".",
     "paths": {}
   },
