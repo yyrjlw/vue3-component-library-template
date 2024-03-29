@@ -12,7 +12,6 @@ defineProps({
     default: 'hello world'
   }
 })
-const a = ref(10)
 </script>
 
 <style scoped></style>

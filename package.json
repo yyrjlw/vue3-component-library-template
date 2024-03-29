@@ -22,9 +22,9 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "build": "rimraf dist & run-p --continue-on-error  build-type build-only",
+    "build": "rimraf dist & run-p  build-type build-only",
     "build-only": "vite build",
-    "build-type": "vue-tsc",
+    "build-type": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
     "prepare": "husky install"

@@ -1,21 +1,14 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["env.d.ts", "auto-imports.d.ts", "lib/**/*", "lib/**/*.vue"],
-  "compilerOptions": {
-    "composite": true,
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "declaration": true,
-    "outDir": "dist",
-    "emitDeclarationOnly": true,
-    "baseUrl": ".",
-    "paths": {}
-  },
+  "files": [],
   "references": [
     {
-      "path": "./tsconfig.node.json"
+      "path": "./tsconfig.build.json"
+    },
+    {
+      "path": "./tsconfig.example.json"
+    },
+    {
+      "path": "tsconfig.node.json"
     }
   ]
 }
