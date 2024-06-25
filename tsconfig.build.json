@@ -1,11 +1,20 @@
 {
-  "extends": "./tsconfig.base.json",
-  "include": ["env.d.ts", "lib/**/*", "lib/**/*.vue"],
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["env.d.ts", "example/**/*", "example/**/*.vue", "lib/**/*", "lib/**/*.vue"],
   "compilerOptions": {
+    "composite": true,
+    "checkJs": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.build.tsbuildinfo",
     "noEmit": false,
     "declaration": true,
     "outDir": "dist",
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "paths": {
+      "@/*": ["./lib/*"]
+    }
   }
 }
