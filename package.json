@@ -54,6 +54,10 @@
     "vue": "^3.4.30",
     "vue-tsc": "^2.0.22"
   },
+  "peerDependencies": {
+    "vue": "^3.4.21",
+    "element-plus": "2.x.x"
+  },
   "lint-staged": {
     "**/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts}": [
       "prettier --write",
