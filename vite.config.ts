@@ -21,7 +21,7 @@ export default defineConfig({
       fileName: 'index'
     },
     rollupOptions: {
-      external: ['vue', /^@?element-plus/, /^@wsjc\//, /^@zmn\//, /^@bee\//],
+      external: ['vue', /^@?element-plus/, /^@wsjc\//, /^@zmn\//, /^@bee\//, /^@ant\//],
       output: {
         globals: {
           vue: 'Vue'
