@@ -27,7 +27,8 @@
     "build-type": "vue-tsc --build --force && tsc-alias -p tsconfig.build.json",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "prepare": "husky"
+    "prepare": "husky",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.10.3",
