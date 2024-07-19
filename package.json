@@ -10,7 +10,7 @@
     "component"
   ],
   "type": "module",
-  "main": "./dist/index.umd.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/lib/index.d.ts",
   "files": [
@@ -28,7 +28,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
     "prepare": "husky",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "test-peerDependencies && npm run build"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.10.3",
@@ -39,6 +39,7 @@
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/tsconfig": "^0.5.1",
+    "@wsjc/configuration": "^1.1.1",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.26.0",
     "husky": "^9.0.11",
@@ -56,8 +57,8 @@
     "vue-tsc": "^2.0.22"
   },
   "peerDependencies": {
-    "vue": "^3.4.21",
-    "element-plus": "2.x.x"
+    "element-plus": "2.x.x",
+    "vue": "^3.4.21"
   },
   "lint-staged": {
     "**/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts}": [

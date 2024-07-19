@@ -1,13 +1,8 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import cssInjectedByJs from 'vite-plugin-css-injected-by-js'
 import { resolve } from 'node:path'
-import UnoCSS from 'unocss/vite'
 import { fileURLToPath } from 'node:url'
+import { defineViteConfigWithDefault } from '@wsjc/configuration'
 
-export default defineConfig({
-  plugins: [vue(), vueJsx(), cssInjectedByJs(), UnoCSS()],
+export default defineViteConfigWithDefault({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./lib', import.meta.url))
@@ -18,15 +13,8 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, './lib/index.ts'),
       name: 'my-component',
-      fileName: 'index'
-    },
-    rollupOptions: {
-      external: ['vue', /^@?element-plus/, /^@wsjc\//, /^@zmn\//, /^@bee\//, /^@ant\//],
-      output: {
-        globals: {
-          vue: 'Vue'
-        }
-      }
+      fileName: 'index',
+      formats: ['es']
     }
   }
 })
