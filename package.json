@@ -31,33 +31,33 @@
     "prepublishOnly": "test-peerDependencies && npm run build"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.10.3",
+    "@rushstack/eslint-patch": "^1.10.4",
     "@tsconfig/node20": "^20.1.4",
-    "@types/node": "^20.14.5",
-    "@vitejs/plugin-vue": "^5.0.5",
+    "@types/node": "^20.14.13",
+    "@vitejs/plugin-vue": "^5.1.1",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/tsconfig": "^0.5.1",
-    "@wsjc/configuration": "^1.1.1",
+    "@wsjc/configuration": "latest",
     "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.26.0",
-    "husky": "^9.0.11",
+    "eslint-plugin-vue": "^9.27.0",
+    "husky": "^9.1.3",
     "lint-staged": "^15.2.7",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.3.2",
-    "rimraf": "^5.0.7",
+    "prettier": "^3.3.3",
+    "rimraf": "^5.0.9",
     "tsc-alias": "^1.8.10",
-    "typescript": "~5.5.2",
-    "unocss": "^0.61.0",
-    "vite": "^5.3.1",
+    "typescript": "~5.5.4",
+    "unocss": "^0.61.6",
+    "vite": "^5.3.5",
     "vite-plugin-css-injected-by-js": "^3.5.1",
-    "vue": "^3.4.30",
-    "vue-tsc": "^2.0.22"
+    "vue": "^3.4.34",
+    "vue-tsc": "^2.0.29"
   },
   "peerDependencies": {
-    "element-plus": "2.x.x",
-    "vue": "^3.4.21"
+    "element-plus": ">=2.7.0",
+    "vue": "3.x"
   },
   "lint-staged": {
     "**/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts}": [
