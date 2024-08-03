@@ -22,7 +22,7 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "build": "rimraf dist & run-p  build-type build-only",
+    "build": "rimraf dist && run-p  build-type build-only",
     "build-only": "vite build",
     "build-type": "vue-tsc --build --force && tsc-alias -p tsconfig.build.json",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
