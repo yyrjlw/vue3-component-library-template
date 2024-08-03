@@ -1,4 +1,3 @@
-import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { defineViteConfigWithDefault } from '@wsjc/configuration'
 
@@ -11,10 +10,8 @@ export default defineViteConfigWithDefault({
   build: {
     emptyOutDir: false,
     lib: {
-      entry: resolve(__dirname, './lib/index.ts'),
-      name: 'my-component',
-      fileName: 'index',
-      formats: ['es']
+      entry: fileURLToPath(new URL('./lib/index.ts', import.meta.url)),
+      fileName: 'index'
     }
   }
 })
